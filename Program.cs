@@ -8,7 +8,7 @@ namespace KolattseHypotisys
         static void Main(string[] args)
         {
             Engine engine = new Engine();
-            engine.GetRandomPrimeNumbers(2, 64, out long[] arr);
+            engine.GetRandomPrimeNumbers(2, 32, out long[] arr);
             foreach (long num in arr)
             {
                 Console.WriteLine(num);
