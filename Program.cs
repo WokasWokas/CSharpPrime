@@ -32,17 +32,6 @@ namespace KolattseHypotisys
             }
             bytes = _bytes;
         }
-        private long BytesToInt(byte[] bytes)
-        {
-            long value = 0;
-            for (int i = 0; i < bytes.Length; i++)
-            {
-                value += (long) (bytes[i] * Math.Pow(2, bytes.Length - i));
-            }
-            if (value < 0)
-                value *= -1;
-            return value / 2;
-        }
         private void GetPrimeNumberUpTo(int ArrayLenght)
         {
             int[] _PrimeNumbers = new int[ArrayLenght];
@@ -105,7 +94,7 @@ namespace KolattseHypotisys
             while (true)
             {
                 RandomBytes(ByteLenght, out byte[] Bytes);
-                long BytesValue = BytesToInt(Bytes);
+                long BytesValue = BitConverter.ToInt32(Bytes);
                 if (IsPrimeNumber(BytesValue))
                     return BytesValue;
             }
