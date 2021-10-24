@@ -20,7 +20,7 @@ namespace KolattseHypotisys
         private int[] PrimeNumbers;
         public Engine()
         {
-            GetPrimeNumberUpTo(1100);
+            GetPrimeNumberUpTo(1101);
         }
         private void RandomBytes(int lenght, out byte[] bytes)
         {
