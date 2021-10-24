@@ -28,7 +28,7 @@ namespace KolattseHypotisys
             _bytes[0] = 1;
             for (int i = 1; i < lenght; i++)
             {
-                _bytes[i] = (byte)RandomNumberGenerator.GetInt32(0, 2);
+                _bytes[i] = (byte)RandomNumberGenerator.GetInt32(0, 8);
             }
             bytes = _bytes;
         }
